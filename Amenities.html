@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        .marq {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px auto;  /* Increased margin for better spacing */
+            max-width: 1200px;
+            gap: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .container img {
+            width: 400px; /* Adjusted image width */
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image maintains aspect ratio */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Added shadow to the image */
+        }
+
+        .text-section {
+            text-align: left;
+            padding: 0 20px;
+            max-width: 500px;
+            color: #2c3e50;
+        }
+
+        .text-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a1a1a; /* Darker text for better contrast */
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+
+        .text-section p {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-top: 20px;
+            line-height: 1.6; /* Improved line spacing for readability */
+        }
+
+        ul {
+            list-style: disc;
+            margin-top: 20px;
+            padding-left: 40px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
+
+        .amenities-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px; /* Reduced gap between images */
+            margin-top: 50px;
+            flex-wrap: wrap; /* Ensure the images wrap on smaller screens */
+        }
+
+        .amenity-item {
+            text-align: center;
+            flex: 1;
+            max-width: 25%; /* Slightly reduced to fit 4 images with closer spacing */
+            min-width: 220px; /* Prevent the items from shrinking too much */
+        }
+
+        .amenity-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .amenity-item h3 {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+
+        .amenity-item p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-to-home a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 18px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <marquee class="marq" direction="left" loop="-1">
+            <h1>Amenities</h1>
+        </marquee>
+    </div>
+
+    <div class="container">
+        <div class="image-section">
+            <img src="D:\website project\amen1.webp" alt="Amenity Image">
+        </div>
+        <div class="text-section">
+            <h2>Discover Luxury Amenities</h2>
+            <p>At The Grand Oasis, we offer a range of world-class amenities designed to enhance your stay. From our rejuvenating spa to our state-of-the-art fitness center, every detail is crafted for your comfort.</p>
+        </div>
+    </div>
+
+    <div class="amenities-gallery">
+        <!-- Amenity 1: Rejuvenating Spa Experience -->
+        <div class="amenity-item">
+            <img src="D:\website project\amen2.webp" alt="Amenity Image 1">
+            <h3>Rejuvenating Spa Experience</h3>
+            <p>Indulge in our spa services, where skilled therapists offer massages, facials, and wellness treatments to revitalize your body and mind.</p>
+        </div>
+
+        <!-- Amenity 2: State-of-the-Art Fitness Center -->
+        <div class="amenity-item">
+            <img src="D:\website project\amen3.webp" alt="Amenity Image 2">
+            <h3>State-of-the-Art Fitness Center</h3>
+            <p>Stay active during your visit with our fully equipped fitness center, featuring the latest exercise machines and personal training options.</p>
+        </div>
+
+        <!-- Amenity 3: Comprehensive Business Facilities -->
+        <div class="amenity-item">
+            <img src="D:\website project\amen4.webp" alt="Amenity Image 3">
+            <h3>Comprehensive Business Facilities</h3>
+            <p>Our business services include meeting rooms and high-speed internet, ensuring you can work efficiently while enjoying the luxury of our hotel.</p>
+        </div>
+    </div>
+
+    <!-- Back to Home Link -->
+    <div class="back-to-home">
+        <a href="The Grand Oasis.html">← Back to Home Page</a>
+    </div>
+</body>
+</html>

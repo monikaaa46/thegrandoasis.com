@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accommodations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .main {
+            text-align: center;
+        }
+
+        .marq {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 50px auto;  /* Increased margin for better spacing */
+            max-width: 1200px;
+            gap: 40px;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Added shadow for depth */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .container img {
+            width: 400px; /* Adjusted image width */
+            height: 350px;
+            border-radius: 10px;
+            object-fit: cover; /* Ensure the image maintains aspect ratio */
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* Added shadow to the image */
+        }
+
+        .text-section {
+            text-align: left;
+            padding: 0 20px;
+            max-width: 500px;
+            color: #2c3e50;
+        }
+
+        .text-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1a1a1a; /* Darker text for better contrast */
+            margin-bottom: 20px; /* Spacing below the heading */
+        }
+
+        .text-section p {
+            font-size: 18px;
+            color: #7f8c8d;
+            margin-top: 20px;
+            line-height: 1.6; /* Improved line spacing for readability */
+        }
+
+        ul {
+            list-style: disc;
+            margin-top: 20px;
+            padding-left: 40px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        ul li {
+            font-size: 18px;
+            color: #2c3e50;
+            margin-bottom: 10px; /* Add spacing between list items */
+        }
+
+        .room-gallery {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px; /* Reduced gap between the images */
+            margin-top: 50px;
+        }
+
+        .room-item {
+            text-align: center;
+            max-width: 350px;
+            flex: 1;
+        }
+
+        .room-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .room-item h3 {
+            font-size: 22px;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+
+        .room-item p {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin: 10px 0;
+        }
+
+        .room-item .book-btn {
+            background-color: #2c3e50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .room-item .book-btn:hover {
+            background-color: #1a242f;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-to-home a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 18px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <marquee class="marq" direction="left" loop="-1">
+            <h1>Accommodations</h1>
+        </marquee>
+    </div>
+
+    <div class="container">
+        <div class="image-section">
+            <img src="D:\website project\room1.webp" alt="Room Image">
+        </div>
+        <div class="text-section">
+            <h2>Discover Our Luxurious Room Types and Amenities</h2>
+            <p>
+                At The Grand Oasis, each room is a sanctuary of elegance and comfort. Enjoy plush bedding, modern amenities, and breathtaking views. Our accommodations are designed to provide a serene escape from the bustling city life.
+            </p>
+            <ul>
+                <li>Spacious rooms with elegant decor</li>
+                <li>State-of-the-art amenities for ultimate comfort</li>
+                <li>Stunning views of the city skyline</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="room-gallery">
+        <!-- Room 1: Elegant King Suite with City View -->
+        <div class="room-item">
+            <img src="D:\website project\room1.webp" alt="Room Image 1">
+            <h3>Elegant King Suite with City View</h3>
+            <p>Our King Suite offers a spacious retreat with stunning city views, perfect for both relaxation and work. Enjoy plush bedding, modern amenities, and a serene ambiance.</p>
+            <a href="Booking.html">
+                <button class="book-btn">Book Now</button>
+            </a>
+        </div>
+
+        <!-- Room 2: Deluxe Queen Room with Garden View -->
+        <div class="room-item">
+            <img src="D:\website project\room2.webp" alt="Room Image 2">
+            <h3>Deluxe Queen Room with Garden View</h3>
+            <p>Experience tranquility in our Deluxe Queen Room, complete with a private balcony. Ideal for unwinding, it combines comfort with a touch of nature.</p>
+            <a href="Booking.html">
+                <button class="book-btn">Book Now</button>
+            </a>
+        </div>
+
+        <!-- Room 3: Spacious Family Suite with Kitchenette -->
+        <div class="room-item">
+            <img src="D:\website project\room3.webp" alt="Room Image 3">
+            <h3>Spacious Family Suite with Kitchenette</h3>
+            <p>Perfect for families, our suite features two bedrooms and a kitchenette, offering ample space and convenience for a comfortable stay.</p>
+            <a href="Booking.html">
+                <button class="book-btn">Book Now</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Back to Home Link -->
+    <div class="back-to-home">
+        <a href="The Grand Oasis.html">← Back to Home Page</a>
+    </div>
+</body>
+</html>

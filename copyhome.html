@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Now</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 36px;
+        }
+
+        .booking-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .booking-form {
+            width: 60%;
+        }
+
+        .room-selection {
+            width: 30%;
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .room-selection h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .room-selection select,
+        .booking-form input,
+        .booking-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .booking-form button {
+            padding: 15px 30px;
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .booking-form button:hover {
+            background-color: #1a242f;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-to-home a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-size: 18px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+
+        .room-selection ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .room-selection li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        /* Success message styling */
+        .success-message {
+            text-align: center;
+            background-color: #28a745;
+            color: white;
+            padding: 20px;
+            font-size: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <h1>Book Your Stay with Us</h1>
+        <p>Choose your room and fill out the form below to book your stay at The Grand Oasis.</p>
+    </div>
+
+    <!-- Booking Container -->
+    <div class="booking-container">
+
+        <!-- Booking Form -->
+        <div class="booking-form">
+            <h2>Personal Information</h2>
+            <form id="bookingForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <input type="text" id="phone" name="phone" placeholder="Your Phone Number" maxlength="10" pattern="^\d{10}$" required title="Phone number must be 10 digits.">
+                <textarea id="message" name="message" rows="4" placeholder="Any special requests or requirements?" required></textarea>
+
+                <button type="submit">Submit Booking</button>
+            </form>
+        </div>
+
+        <!-- Room Selection -->
+        <div class="room-selection">
+            <h2>Select Your Room</h2>
+            <form id="roomSelectionForm">
+                <ul>
+                    <li><input type="radio" name="room" value="Elegant King Suite with City View" required> Elegant King Suite with City View</li>
+                    <li><input type="radio" name="room" value="Deluxe Queen Room with Garden View" required> Deluxe Queen Room with Garden View</li>
+                    <li><input type="radio" name="room" value="Spacious Family Suite with Kitchenette" required> Spacious Family Suite with Kitchenette</li>
+                </ul>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        Your booking has been successfully received! We look forward to welcoming you to The Grand Oasis. 
+    </div>
+
+    <!-- Back to Home Link -->
+    <div class="back-to-home">
+        <a href="HOMEFINAL.html">← Back to Home Page</a>
+    </div>
+
+    <script>
+        document.getElementById("bookingForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Ensure room selection is made
+            const roomSelected = document.querySelector('input[name="room"]:checked');
+            if (!roomSelected) {
+                alert("Please select a room!");
+                return;
+            }
+
+            // Display success message
+            document.getElementById("successMessage").style.display = "block";
+
+            // Clear form fields
+            document.getElementById("bookingForm").reset();
+            document.getElementById("roomSelectionForm").reset(); // Reset the room selection
+        });
+    </script>
+
+</body>
+</html>
